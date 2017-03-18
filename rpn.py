@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import math
 
 def add(arg1, arg2):
 	return arg1 + arg2
@@ -7,10 +7,13 @@ def add(arg1, arg2):
 def subtract(arg1, arg2):
 	return arg1 - arg2
 
+def powerOf(arg1, arg2):
+	return math.pow(arg1, arg2)
 
 OPERATORS = {
 	'+': add,
 	'-': subtract,
+	'^': powerOf,
 }
 
 
