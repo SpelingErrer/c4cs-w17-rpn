@@ -7,9 +7,9 @@ install:
   - pip install python-coveralls
   - pip install coverage
   - pip install nose
-  - pip install termcolor
 
 script:
+  - pip install termcolor
   - nosetests --with-coverage
 
 after_success:
