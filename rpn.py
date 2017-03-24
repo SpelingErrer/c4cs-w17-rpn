@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 import math
+import readline
+from termcolor import colored
+
 
 def add(arg1, arg2):
 	return arg1 + arg2
@@ -33,6 +36,7 @@ def calculate(arg):
 			arg2 = stack.pop()
 			arg1 = stack.pop()
 			operator_fn = OPERATORS[operand]
+			print colored(arg1, 'red'), colored(operand, 'green'), colored(arg2, 'red'), colored('=:', 'green')
 			result = operator_fn(arg1, arg2)
 
 			stack.append(result)
@@ -42,7 +46,7 @@ def calculate(arg):
 def main():
 	while True:
 		result = calculate(input("rpn calc> "))
-		print("Result:", result)
+		print colored(result, 'blue')
 
 if __name__ == '__main__':
 	main()
