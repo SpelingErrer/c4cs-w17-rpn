@@ -36,7 +36,7 @@ def calculate(arg):
 			arg2 = stack.pop()
 			arg1 = stack.pop()
 			operator_fn = OPERATORS[operand]
-			print colored(arg1, 'red'), colored(operand, 'green'), colored(arg2, 'red'), colored('=:', 'green')
+			#print colored(arg1, 'red'), colored(operand, 'green'), colored(arg2, 'red'), colored('=:', 'green')
 			result = operator_fn(arg1, arg2)
 
 			stack.append(result)
@@ -46,7 +46,7 @@ def calculate(arg):
 def main():
 	while True:
 		result = calculate(input("rpn calc> "))
-		print colored(result, 'blue')
+		print(result)
 
 if __name__ == '__main__':
 	main()
